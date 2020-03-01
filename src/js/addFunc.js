@@ -1,6 +1,6 @@
 import { inputField } from './inputField';
 
-export const AddBtn = () => {
+const addFunc = () => {
   const myUl = document.querySelector('#myUL');
 
   const text = inputField.getInputFieldText();
@@ -11,3 +11,5 @@ export const AddBtn = () => {
   myUl.appendChild(li);
   inputField.value = '';
 };
+
+export default addFunc;

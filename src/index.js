@@ -1,7 +1,3 @@
-import { AddBtn as addFunc } from './js/AddBtn';
+import todolist from './js/todolist'
 
-const addBtn = document.querySelector('#addBtn');
-const inputField = document.querySelector('#content');
-
-addBtn.addEventListener('click', addFunc);
-inputField.addEventListener('keyup', e => e.keyCode === 13 && addFunc());
+todolist.init();

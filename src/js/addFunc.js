@@ -4,12 +4,15 @@ const addFunc = () => {
   const myUl = document.querySelector('#myUL');
 
   const text = inputField.getInputFieldText();
-  inputField.resetInputFieldText();
 
-  const li = document.createElement('li');
-  li.innerHTML = text;
-  myUl.appendChild(li);
-  inputField.value = '';
+  if( text !== '' ) {
+    inputField.resetInputFieldText();
+
+    const li = document.createElement('li');
+    li.innerHTML = text;
+    myUl.appendChild(li);
+    inputField.value = '';
+  }
 };
 
 export default addFunc;

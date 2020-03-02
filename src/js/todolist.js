@@ -7,6 +7,7 @@ const todolist = {
 
     addBtn.addEventListener('click', addFunc);
     inputField.addEventListener('keyup', e => e.keyCode === 13 && addFunc());
+    this.todos();
   },
 
   todos() {
@@ -16,6 +17,13 @@ const todolist = {
       const target = e.target;
       if(target.nodeType === 1 && target.tagName === 'LI') {
         target.classList.toggle('checked');
+      }
+    })
+
+    myUl.addEventListener('dblclick', e => {
+      const target = e.target;
+      if (target.nodeType === 1 && target.tagName === 'LI') {
+        target.parentNode.removeChild(target);
       }
     })
   }

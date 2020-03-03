@@ -1,4 +1,4 @@
-const deleteFunc = e => {
+const deleteFunc = () => {
   const myUl = document.querySelector('#myUL');
 
   Array.from(myUl.children).forEach(iter => {
@@ -6,7 +6,6 @@ const deleteFunc = e => {
       myUl.removeChild(iter);
     }
   });
-
 }
 
 export default deleteFunc;
